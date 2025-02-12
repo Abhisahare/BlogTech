@@ -3,6 +3,8 @@ title: "Getting Started with Web Development in 2024"
 date: "2024-03-15"
 excerpt: "A comprehensive guide for beginners starting their journey in web development"
 image: "/images/web-dev.jpg"
+tags: ["Web Development", "Beginners", "HTML", "CSS", "JavaScript"]
+author: "John Doe"
 ---
 
 Web development is an exciting field that's constantly evolving. In this guide, we'll explore the fundamental concepts and tools you need to begin your journey as a web developer.

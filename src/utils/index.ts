@@ -4,5 +4,7 @@ export interface Post {
     date: string
     excerpt: string
     content: string
-    image?: string
+    image: string
+    tags?: string[]
+    author?: string
   }

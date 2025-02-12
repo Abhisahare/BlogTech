@@ -1,8 +1,8 @@
-import fs from 'fs'
-import path from 'path'
-import matter from 'gray-matter'
-import { marked } from 'marked'
-import type { Post } from './index'
+import fs from 'fs';
+import path from 'path';
+import matter from 'gray-matter';
+import { marked } from 'marked';
+import type { Post } from './index';
 
 const postsDirectory = path.join(process.cwd(), 'posts')
 
@@ -21,7 +21,9 @@ export function getAllPosts(): Post[] {
         date: data.date,
         excerpt: data.excerpt || '',
         content: marked.parse(content, { async: false }),
-        image: data.image,
+        image: data.image || '/images/default-post.jpg',
+        tags: data.tags || [],
+        author: data.author || 'Admin',
       }
     })
 
@@ -44,7 +46,9 @@ export function getPostBySlug(slug: string): Post | null {
       date: data.date,
       excerpt: data.excerpt || '',
       content: marked.parse(content, { async: false }),
-      image: data.image,
+      image: data.image || '/images/default-post.jpg',
+      tags: data.tags || [],
+      author: data.author || 'Admin',
     }
   } catch (error) {
     console.error('Error reading post:', error)
